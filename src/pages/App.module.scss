@@ -1,0 +1,38 @@
+
+.App {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    background-color: #DEF5E5;
+    .content{
+       flex: 1;
+       text-align: center;
+    }
+    .header{
+      background-color: #8EC3B0;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      .siteName a:-webkit-any-link{
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        color: #fafafa;
+        font-size: x-large;
+        font-weight: 600;
+        text-decoration: none;
+        margin-left: 36px;
+      }
+
+      
+    }
+    .footer{
+      text-align: center;
+      padding: 50px 0px;
+      color: #555;
+      background: #9ED5C5;
+      border-top: 1px solid #f2f2f2;
+      p{
+        padding: 2px 0px;
+      }
+    }
+  }
+  
