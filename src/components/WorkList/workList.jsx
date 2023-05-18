@@ -10,7 +10,7 @@ const WorkList = ({workListData}) => {
             <li key={item.id}>
               <Link to={ `/React_Training/works/${item.id}` }>
                 <div className={ styles.cover }>
-                  <img  src={require(`../../assets/images/${item.cover}`)} />
+                  <img src={require(`../../assets/images/${item.cover}`)} />
                 </div>
                 <div className={styles.workbrief}>
                   <h3>{item.title}</h3>

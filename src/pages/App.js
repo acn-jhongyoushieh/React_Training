@@ -3,6 +3,7 @@ import styles from './App.module.scss';
 import { Link, Routes, Route } from 'react-router-dom';
 import HomePage from './HomePage/HomePage';
 import TodoList from './TodoList/TodoList';
+import WeatherTool from './WeatherTool/WeatherTool';
 
 function App() {
   return (
@@ -18,10 +19,11 @@ function App() {
       <Routes>
         <Route path="/React_Training" element={ <HomePage/> } />
         <Route path="/React_Training/works/todolist" element={ <TodoList/> } />
+        <Route path="/React_Training/works/weathertool" element={ <WeatherTool/> } />
       </Routes>
     </section>
     <footer className={styles.footer}>
-      footer
+      jhong-you.shieh React_Training
     </footer>
   </div>
   );

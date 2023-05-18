@@ -11,8 +11,10 @@
         align-items: center;
         flex-wrap: wrap;
         list-style:none;
+        padding: 0;
+        margin: 24px;
         li {
-            width: 45%;            
+            width: 50%;            
             margin-bottom: 45px;
             a {
                 display: inline-flex;
@@ -23,6 +25,7 @@
                         margin: auto;
                         max-width: 120px;
                         max-height: 120px;
+                        background-color: #fafafa;
                         border-radius: 10px;
                         border-color: #fafafa;
                         border-width: 4px;

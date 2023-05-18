@@ -1,0 +1,48 @@
+.weatherCard{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    width: 320px;
+    height: 260px;
+    margin: 32px auto;
+    background-color: #BCEAD5;
+    box-shadow: 10px 10px 5px  rgba(0, 0, 0, .4);
+    border-radius: 20px;
+    text-align: center;
+    h1 {
+        padding-top: 16px;
+    }
+    .mainInfo {
+        display: inline-flex;
+        justify-content: space-between;
+        align-items: center;
+        .weatherIcon {
+            img {
+                max-width: 120px;
+                max-height: 120px;
+            }
+        }
+        .temperature {
+            margin-left: 12px;
+            font-size: 60px;
+        }
+        .degrees {
+            margin-bottom: 24px;
+            font-size: 32px;
+        }
+    }
+    .windInfo {
+        margin-top: 16px;
+        display: inline-flex;
+        justify-content: space-between;
+        align-items: center;
+        .windIcon {
+            img {
+                max-width: 32px;
+                max-height: 32px;
+            }
+        }
+        .windspeed {
+            margin-left: 8px;
+            font-size: 16px;
+        }
+    }
+  }
