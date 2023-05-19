@@ -20,6 +20,7 @@ function App() {
         <Route path="/React_Training" element={ <HomePage/> } />
         <Route path="/React_Training/works/todolist" element={ <TodoList/> } />
         <Route path="/React_Training/works/weathertool" element={ <WeatherTool/> } />
+        <Route path="*" element={<HomePage />} />
       </Routes>
     </section>
     <footer className={styles.footer}>
