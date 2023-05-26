@@ -1,24 +1,25 @@
 .searchArea {
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    display: inline-flex;
-    align-items: center;
-    .dropdown {
-        font-weight: bold;
-        width: 180px;
-        :hover{
-            cursor: pointer;
-        }
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  display: inline-flex;
+  align-items: center;
+  .dropdown {
+    font-weight: bold;
+    width: 180px;
+    :hover {
+      cursor: pointer;
     }
-    .searchButton {
-        cursor: pointer;
-        box-shadow: 5px 5px 5px  rgba(0, 0, 0, .4);
-        border: 0;
-        width: 120px;
-        height: 40px;
-        background-color: #BCEAD5;
-        border-radius: 12px;
-        margin: 24px;
-        font-size: 18px;
-        font-weight: bold;
-    }
+  }
+  .searchButton {
+    cursor: pointer;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);
+    border: 0;
+    width: 120px;
+    height: 40px;
+    background-color: #bcead5;
+    border-radius: 12px;
+    margin: 24px;
+    font-size: 18px;
+    font-weight: bold;
+  }
 }

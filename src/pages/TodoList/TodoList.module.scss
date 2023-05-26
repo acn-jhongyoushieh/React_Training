@@ -1,108 +1,109 @@
 .ListPanel {
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    width: 600px;
-    margin: 32px auto;
-    background-color: #BCEAD5;
-    box-shadow: 10px 10px 5px  rgba(0, 0, 0, .4);
-    border-radius: 20px;
-    text-align: center;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  width: 600px;
+  margin: 32px auto;
+  background-color: #bcead5;
+  box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.4);
+  border-radius: 20px;
+  text-align: center;
 
-    h1 {
-        padding-top: 16px;
-    }
+  h1 {
+    padding-top: 16px;
+  }
 
-    .ListArea {
-        width: 80%;
-        margin: auto;
-    }
+  .ListArea {
+    width: 80%;
+    margin: auto;
+  }
 
-    .addTodo {
-        display: flex;
-        .addTextbox{
-            width: 92%;
-            height: 32px;
-            border: #9ED5C5;
-            border-radius: 5px;
-        }
-        .addTextbox:focus{
-            outline: #9ED5C5;
-        }
-        .addButton {
-            margin-right: auto;
-            height: 34px;
-            width: 8%;
-            border: #9ED5C5;
-            background: #8EC3B0;
-            font-size: 20px;
-            border-radius: 5px;
-            color: #fefefe;
-            cursor: pointer;
-        }
+  .addTodo {
+    display: flex;
+    .addTextbox {
+      width: 92%;
+      height: 32px;
+      border: #9ed5c5;
+      border-radius: 5px;
     }
-    
-    .list {
-        ul {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            list-style: none;
-            padding: 0;
-            li {
-                display: flex;
-                align-items: center;
-                margin-top: 8px;
-                label {
-                    margin-left: 8px;
-                    font-size: 28px;
-                }
-                .todoChecked {
-                    text-decoration-line: line-through;
-                }
-                input {
-                    -webkit-appearance:none;
-                    width: 24px;
-                    height: 24px;
-                    border-radius: 4px;
-                    background-color: #fefefe;
-                    cursor: pointer;
-                } 
-                :checked {
-                    background-color: #8EC3B0;
-                    border: 4px solid #fefefe;
-                }
-            }
-        }
+    .addTextbox:focus {
+      outline: #9ed5c5;
     }
+    .addButton {
+      margin-right: auto;
+      height: 34px;
+      width: 8%;
+      border: #9ed5c5;
+      background: #8ec3b0;
+      font-size: 20px;
+      border-radius: 5px;
+      color: #fefefe;
+      cursor: pointer;
+    }
+  }
 
-    .info {
-        padding-bottom: 16px;
-        margin-top: 8px;
-        height: 80px;
+  .list {
+    ul {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      list-style: none;
+      padding: 0;
+      li {
         display: flex;
         align-items: center;
-        .itemNumbers {
-            display: flex;
-            align-items: center;
-            font-size: 16px;
-            .number{
-                margin-left: 4px;
-                margin-right: 8px;
-                margin-top: 22px;
-                font-size: 32px;
-            }
-        } 
-        .clearButton {
-            margin-left: auto;
-            height: 34px;
-            width: 140px;
-            border: #9ED5C5;
-            background: #8EC3B0;
-            box-shadow: 5px 5px 5px  rgba(0, 0, 0, .4);
-            font-size: 16px;
-            font-weight: bold;
-            border-radius: 5px;
-            color: #fefefe;
-            cursor: pointer;
+        margin-top: 8px;
+        label {
+          margin-left: 8px;
+          font-size: 28px;
         }
+        .todoChecked {
+          text-decoration-line: line-through;
+        }
+        input {
+          -webkit-appearance: none;
+          width: 24px;
+          height: 24px;
+          border-radius: 4px;
+          background-color: #fefefe;
+          cursor: pointer;
+        }
+        :checked {
+          background-color: #8ec3b0;
+          border: 4px solid #fefefe;
+        }
+      }
     }
+  }
+
+  .info {
+    padding-bottom: 16px;
+    margin-top: 8px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    .itemNumbers {
+      display: flex;
+      align-items: center;
+      font-size: 16px;
+      .number {
+        margin-left: 4px;
+        margin-right: 8px;
+        margin-top: 22px;
+        font-size: 32px;
+      }
+    }
+    .clearButton {
+      margin-left: auto;
+      height: 34px;
+      width: 140px;
+      border: #9ed5c5;
+      background: #8ec3b0;
+      box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 5px;
+      color: #fefefe;
+      cursor: pointer;
+    }
+  }
 }
