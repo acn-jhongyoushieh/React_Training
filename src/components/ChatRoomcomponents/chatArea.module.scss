@@ -1,0 +1,110 @@
+.ChatArea {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  .ChatContent {
+    display: flex;
+    flex-direction: column;
+    max-height: 600px;
+    overflow-y: auto;
+    padding-bottom: 16px;
+    .friendMessage {
+      text-align: start;
+      margin-top: 12px;
+      margin-left: 24px;
+      margin-right: auto;
+      height: auto;
+      width: auto;
+      max-width: 60%;
+      .userInfoArea {
+        display: flex;
+        align-items: center;
+        .userName {
+          font-size: 16px;
+          margin: 0;
+          margin-left: 4px;
+          margin-bottom: 2px;
+        }
+        .timestamp {
+          font-size: 12px;
+          margin-left: 6px;
+          margin-top: 0px;
+          margin-bottom: 4px;
+        }
+      }
+
+      .userMessage {
+        font-size: large;
+        width: max-content;
+        max-width: 100%;
+        padding: 10px 15px;
+        background-color: #fefefe;
+        border-radius: 10px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        overflow-wrap: break-word;
+      }
+    }
+    .MyMessage {
+      text-align: end;
+      margin-top: 12px;
+      margin-right: 24px;
+      margin-left: auto;
+      height: auto;
+      width: auto;
+      max-width: 60%;
+      .userName {
+        font-size: 16px;
+        margin: 0;
+        display: none;
+      }
+      .timestamp {
+        font-size: 14px;
+        margin-top: 0px;
+        margin-bottom: 2px;
+        margin-right: 4px;
+      }
+      .userMessage {
+        text-align: end;
+        font-size: large;
+        padding: 10px 15px;
+        width: max-content;
+        max-width: 95%;
+        background-color: #395b64;
+        border-radius: 10px;
+        color: #fefefe;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        margin-left: auto;
+        overflow-wrap: break-word;
+      }
+    }
+  }
+
+  .sendArea {
+    width: 100%;
+    display: flex;
+    margin-top: auto;
+    input {
+      width: 95%;
+      height: 44px;
+      border: #395b64;
+      font-size: 20px;
+    }
+    input:focus {
+      outline: #fff;
+    }
+    button {
+      margin-right: auto;
+      height: 46px;
+      width: 10%;
+      border: #fff;
+      background: #395b64;
+      font-size: 20px;
+      border-bottom-right-radius: 5px;
+      border-top-right-radius: 5px;
+      color: #fefefe;
+      cursor: pointer;
+    }
+  }
+}

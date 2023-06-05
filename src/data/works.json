@@ -17,6 +17,12 @@
       "brief": "imgurのAPIでoAuth2.0認証練習、ローカル環境しか動かないです。",
       "cover": "imgur.jpg",
       "id": "imgurTool"
+    },
+    {
+      "title": "チャットルーム",
+      "brief": "redux状態管理の実装練習とChatGPTをチャットルームに加入させる効果検証",
+      "cover": "redux_chatGBT.png",
+      "id": "chatRoom"
     }
   ]
 }

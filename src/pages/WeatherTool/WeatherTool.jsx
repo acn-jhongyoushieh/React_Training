@@ -24,7 +24,6 @@ const WeatherTool = () => {
 
   function setSelectedValue(selectedValue) {
     searchTarget = selectedValue;
-    console.log(searchTarget);
   }
 
   function getTodayWeather(searchTarget) {

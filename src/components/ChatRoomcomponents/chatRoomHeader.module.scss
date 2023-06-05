@@ -1,0 +1,26 @@
+.chatheader {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  .userSelect {
+    margin-left: auto;
+    margin-right: 18px;
+    width: 220px;
+    :hover {
+      cursor: pointer;
+    }
+  }
+  .addUser {
+    color: #fefefe;
+    font-weight: bold;
+    background-color: #395b64;
+    border: 0;
+    border-radius: 5px;
+    height: 32px;
+    width: 110px;
+    margin-right: 32px;
+    cursor: pointer;
+  }
+}
