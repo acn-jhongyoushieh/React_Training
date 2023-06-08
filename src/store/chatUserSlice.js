@@ -4,15 +4,15 @@ const userIniList = {
   chatUserList: [
     {
       label: "ユーザーA",
-      value: "A",
+      value: "userA@test.com",
     },
     {
       label: "ユーザーB",
-      value: "B",
+      value: "userB@test.com",
     },
     {
       label: "ユーザーC",
-      value: "C",
+      value: "userC@test.com",
     },
   ],
 };
@@ -20,7 +20,7 @@ const userIniList = {
 const userIniState = {
   chatUserInfo: {
     userName: "ユーザーA",
-    userEmail: "A",
+    userEmail: "userA@test.com",
   },
 };
 

@@ -1,17 +1,29 @@
 .ChatRoomManager {
   height: 100%;
   text-align: start;
-  .addChat {
-    border: 0;
-    background-color: #a5c9ca;
-    font-size: x-large;
-    cursor: pointer;
-    margin-top: 12px;
-    margin-left: 16px;
-    color: #2c3333;
-    margin-bottom: 8px;
+  .buttonArea:hover {
+    background-color: #e7f6f2;
   }
+  .buttonArea {
+    .addChat {
+      border: 0;
+      background: rgba(0, 0, 0, 0);
+      font-size: x-large;
+      cursor: pointer;
+      margin-top: 12px;
+      margin-left: 16px;
+      color: #2c3333;
+      margin-bottom: 8px;
+    }
+  }
+
   .chatList {
+    .chatItem:hover {
+      background-color: #e7f6f2;
+    }
+    .chatItem:hover .chatInfo .deleteIcon {
+      display: block;
+    }
     .chatItem {
       border: 0;
       padding-top: 8px;
@@ -20,10 +32,22 @@
       padding-bottom: 8px;
       color: #2c3333;
       cursor: pointer;
-      .chatTitle {
-        font-size: 22px;
-        font-weight: bold;
-        margin: 0;
+      .chatInfo {
+        display: flex;
+        align-items: center;
+
+        .chatTitle {
+          font-size: 22px;
+          font-weight: bold;
+          margin: 0;
+        }
+        .deleteIcon {
+          display: none;
+          margin-left: auto;
+          margin-right: 12px;
+          width: 20px;
+          height: 20px;
+        }
       }
       .chatContent {
         margin-top: 2px;
@@ -33,6 +57,10 @@
         margin: 0;
       }
     }
+
+    .currentItem:hover .chatInfo .deleteIcon {
+      display: block;
+    }
     .currentItem {
       border: 0;
       padding-top: 8px;
@@ -41,11 +69,23 @@
       padding-bottom: 8px;
       color: #fefefe;
       background-color: #395b64;
-      cursor: pointer;
-      .chatTitle {
-        font-size: 22px;
-        font-weight: bold;
-        margin: 0;
+      .chatInfo {
+        display: flex;
+        align-items: center;
+        .chatTitle {
+          font-size: 22px;
+          font-weight: bold;
+          margin: 0;
+        }
+        .deleteIcon {
+          display: none;
+          filter: brightness(0) invert(1);
+          margin-left: auto;
+          margin-right: 12px;
+          width: 20px;
+          height: 20px;
+          cursor: pointer;
+        }
       }
       .chatContent {
         margin-top: 2px;

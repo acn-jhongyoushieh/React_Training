@@ -1,24 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-/*
-const chatRoomContents = {
-  currentRoom: "",
-  roomList: [
-    {
-      roomId: "",
-      roomName: "",
-      messageList: [
-        {
-          userName: "",
-          message: "",
-          timestamp: "",
-        },
-      ],
-    },
-  ],
-};
-*/
-
 const chatRoomContentsSlice = createSlice({
   name: "chatRoomContents",
   initialState: { currentRoom: "", roomList: [] },
@@ -26,6 +7,10 @@ const chatRoomContentsSlice = createSlice({
     setRoomList(state, action) {
       state.roomList.push({ ...action.payload, roomId: state.roomList.length });
       state.currentRoom = state.roomList.length - 1;
+    },
+    removeRoom(state, action) {
+      const id = action.payload;
+      state.roomList = state.roomList.filter((room) => room.roomId !== id);
     },
     setCurrentRoom(state, action) {
       state.currentRoom = action.payload;
@@ -38,7 +23,7 @@ const chatRoomContentsSlice = createSlice({
   },
 });
 
-export const { setRoomList, setCurrentRoom, setMessageList } =
+export const { setRoomList, setCurrentRoom, setMessageList, removeRoom } =
   chatRoomContentsSlice.actions;
 
 export const cahtRoomSlice = chatRoomContentsSlice.reducer;

@@ -23,7 +23,13 @@ const ChatRoomHeader = () => {
   const chatUserAdd = () => {
     const newUserName = window.prompt("ユーザー名を入力してください。");
     const newUserEmail = window.prompt("メールアドレスを入力してください。");
-    if (newUserName && newUserEmail) {
+    if (
+      newUserName &&
+      newUserEmail &&
+      newUserEmail.match(
+        /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
+      )
+    ) {
       disPatch(
         setChatListUser({
           label: newUserName,

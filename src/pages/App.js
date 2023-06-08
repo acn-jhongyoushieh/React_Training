@@ -1,4 +1,5 @@
 import styles from "./App.module.scss";
+import { useEffect } from "react";
 import { Link, Routes, Route } from "react-router-dom";
 import HomePage from "./HomePage/HomePage";
 import TodoList from "./TodoList/TodoList";
@@ -19,6 +20,9 @@ const store = configureStore({
 });
 
 function App() {
+  useEffect(() => {
+    document.title = `React作品集`;
+  });
   return (
     <Provider store={store}>
       <div className={styles.App}>

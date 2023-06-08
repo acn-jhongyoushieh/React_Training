@@ -1,7 +1,11 @@
 import React from "react";
 import styles from "./chatRoomManager.module.scss";
 import { useSelector, useDispatch } from "react-redux";
-import { setRoomList, setCurrentRoom } from "../../store/chatRoomSlice";
+import {
+  setRoomList,
+  setCurrentRoom,
+  removeRoom,
+} from "../../store/chatRoomSlice";
 
 const ChatRoomManager = () => {
   const chatRoomContents = useSelector((state) => state.cahtRoomContents);
@@ -25,11 +29,25 @@ const ChatRoomManager = () => {
     disPatch(setCurrentRoom(roomId));
   };
 
+  const deleteChatRoom = (event, roomId) => {
+    event.stopPropagation();
+    if (
+      window.confirm(
+        "チャットルーム、及び、チャットの内容が削除されますが、よろしいでしょうか？"
+      )
+    ) {
+      disPatch(removeRoom(roomId));
+      window.alert("チャットルームが削除されました");
+    }
+  };
+
   return (
     <div className={styles.ChatRoomManager}>
-      <button className={styles.addChat} onClick={addChatRoom}>
-        + New Chat
-      </button>
+      <div className={styles.buttonArea}>
+        <button className={styles.addChat} onClick={addChatRoom}>
+          + New Chat
+        </button>
+      </div>
       <div className={styles.chatList}>
         {chatRoomContents.roomList.length ? (
           chatRoomContents.roomList.map((roomContent) => (
@@ -42,7 +60,16 @@ const ChatRoomManager = () => {
                 }
                 onClick={() => changeChatRoom(roomContent.roomId)}
               >
-                <p className={styles.chatTitle}>{roomContent.roomName}</p>
+                <div className={styles.chatInfo}>
+                  <p className={styles.chatTitle}>{roomContent.roomName}</p>
+                  <img
+                    className={styles.deleteIcon}
+                    onClick={(event) =>
+                      deleteChatRoom(event, roomContent.roomId)
+                    }
+                    src={require(`../../assets/icons/deleteicon.png`)}
+                  />
+                </div>
                 <p className={styles.chatContent}>
                   {roomContent.messageList.length
                     ? roomContent.messageList[
