@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/React_Training/static/css/main.d8491e69.css",
-    "main.js": "/React_Training/static/js/main.ce371911.js",
+    "main.css": "/React_Training/static/css/main.63c86074.css",
+    "main.js": "/React_Training/static/js/main.680a6486.js",
     "static/js/787.49822c96.chunk.js": "/React_Training/static/js/787.49822c96.chunk.js",
     "static/media/todoList.png": "/React_Training/static/media/todoList.5a9533ba3a3aa96ba3bc.png",
     "static/media/weatherWind.png": "/React_Training/static/media/weatherWind.4d3a99b144435d35ac29.png",
@@ -16,12 +16,12 @@
     "static/media/weather9.png": "/React_Training/static/media/weather9.0072e4b45e75f7dbe165.png",
     "static/media/logo.svg": "/React_Training/static/media/logo.6ce24c58023cc2f8fd88.svg",
     "index.html": "/React_Training/index.html",
-    "main.d8491e69.css.map": "/React_Training/static/css/main.d8491e69.css.map",
-    "main.ce371911.js.map": "/React_Training/static/js/main.ce371911.js.map",
+    "main.63c86074.css.map": "/React_Training/static/css/main.63c86074.css.map",
+    "main.680a6486.js.map": "/React_Training/static/js/main.680a6486.js.map",
     "787.49822c96.chunk.js.map": "/React_Training/static/js/787.49822c96.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d8491e69.css",
-    "static/js/main.ce371911.js"
+    "static/css/main.63c86074.css",
+    "static/js/main.680a6486.js"
   ]
 }
