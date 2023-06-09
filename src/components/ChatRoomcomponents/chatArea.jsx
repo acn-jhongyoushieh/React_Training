@@ -14,7 +14,7 @@ const ChatArea = () => {
   const disPatch = useDispatch();
   const inputMessage = useRef();
 
-  const targetMessageRange = 5;
+  const targetMessageRange = 10;
 
   const sendByKeyDown = (e) => {
     if (e.key === "Enter") {
@@ -39,8 +39,9 @@ const ChatArea = () => {
       );
 
       if (inputMessage.current.value.includes("@ChatGPT")) {
-        const messageList =
-          chatRoomContents.roomList[chatRoomContents.currentRoom].messageList;
+        const messageList = chatRoomContents.roomList.find(
+          (room) => room.roomId === chatRoomContents.currentRoom
+        ).messageList;
         const targetMessage = messageList.slice(
           Math.max(messageList.length - targetMessageRange, 1)
         );
@@ -66,8 +67,10 @@ const ChatArea = () => {
   };
 
   const emailToName = (email) => {
-    const name = email.replace("@", "_").replace("-", "_").replace(/\./g, "_");
-    return name;
+    if (email) {
+      const toName = email;
+      return toName.replace("@", "_").replace("-", "_").replace(/\./g, "_");
+    }
   };
 
   const getGPTAnsCall = async (requestMessage) => {
@@ -103,30 +106,32 @@ const ChatArea = () => {
   return (
     <div className={styles.ChatArea}>
       <div className={styles.ChatContent}>
-        {chatRoomContents.roomList[chatRoomContents.currentRoom].messageList &&
-          chatRoomContents.roomList[
-            chatRoomContents.currentRoom
-          ].messageList.map((message, index, messageList) => (
-            <div
-              className={
-                message.userName === currentUser.userName
-                  ? styles.MyMessage
-                  : styles.friendMessage
-              }
-            >
-              {messageList[index - 1]?.userName === message.userName ? (
-                ""
-              ) : (
-                <div className={styles.userInfoArea}>
-                  <h3 className={styles.userName}>{message.userName}</h3>
-                  <p className={styles.timestamp}>
-                    {moment(message.timestamp).format("MM/DD HH:mm")}
-                  </p>
-                </div>
-              )}
-              <p className={styles.userMessage}>{message.message}</p>
-            </div>
-          ))}
+        {chatRoomContents.roomList.find(
+          (room) => room.roomId === chatRoomContents.currentRoom
+        ).messageList &&
+          chatRoomContents.roomList
+            .find((room) => room.roomId === chatRoomContents.currentRoom)
+            .messageList.map((message, index, messageList) => (
+              <div
+                className={
+                  message.userName === currentUser.userName
+                    ? styles.MyMessage
+                    : styles.friendMessage
+                }
+              >
+                {messageList[index - 1]?.userName === message.userName ? (
+                  ""
+                ) : (
+                  <div className={styles.userInfoArea}>
+                    <h3 className={styles.userName}>{message.userName}</h3>
+                    <p className={styles.timestamp}>
+                      {moment(message.timestamp).format("MM/DD HH:mm")}
+                    </p>
+                  </div>
+                )}
+                <p className={styles.userMessage}>{message.message}</p>
+              </div>
+            ))}
         {isLoading ? (
           <div className={styles.friendMessage}>
             <div className={styles.loadingMessage}>

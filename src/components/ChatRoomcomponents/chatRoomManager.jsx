@@ -36,6 +36,18 @@ const ChatRoomManager = () => {
         "チャットルーム、及び、チャットの内容が削除されますが、よろしいでしょうか？"
       )
     ) {
+      if (
+        roomId === chatRoomContents.currentRoom &&
+        chatRoomContents.roomList.length > 1
+      ) {
+        disPatch(
+          setCurrentRoom(
+            chatRoomContents.roomList.find(
+              (room) => room.roomId !== chatRoomContents.currentRoom
+            ).roomId
+          )
+        );
+      }
       disPatch(removeRoom(roomId));
       window.alert("チャットルームが削除されました");
     }
